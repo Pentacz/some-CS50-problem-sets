@@ -7,7 +7,7 @@ int main(int argc, string argv[])
     float x;     
     do
     {
-    x = get_float("Change owed: ");
+        x = get_float("Change owed: ");
     }
     while (x < 0);
     int i = round(x * 100);
@@ -16,16 +16,16 @@ int main(int argc, string argv[])
     int c = 0;
     while (i >= 25)
     {
-    i = i - 25; a++;
+        i = i - 25; a++;
     }
     while (i >= 10)
     {
-    i = i - 10; b++;
+        i = i - 10; b++;
     }
     while (i >= 5)
     {
-    i = i - 5; c++;
+        i = i - 5; c++;
     }
-    printf("%i\n", a + b + c + i);
+        printf("%i\n", a + b + c + i);
 }
 
