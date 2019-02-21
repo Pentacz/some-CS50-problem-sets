@@ -11,6 +11,7 @@ int main(void)
         h = get_int("Height: ");
     }
     while (h < 1 || h > 8);
+    
     // Prints hashes
     for (int i = 0; i < h; i++)
     {
@@ -30,6 +31,6 @@ int main(void)
         {
             printf("#");
         }
-            printf("\n");
+        printf("\n");
     }       
 }
