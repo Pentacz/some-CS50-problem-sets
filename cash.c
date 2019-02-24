@@ -17,15 +17,18 @@ int main(int argc, string argv[])
     int a = 0, b = 0, c = 0;
     while (i >= 25)
     {
-        i = i - 25; a++;
+        i = i - 25;
+        a++;
     }
     while (i >= 10)
     {
-        i = i - 10; b++;
+        i = i - 10;
+        b++;
     }
     while (i >= 5)
     {
-        i = i - 5; c++;
+        i = i - 5;
+        c++;
     }
     printf("%i\n", a + b + c + i);
 }
