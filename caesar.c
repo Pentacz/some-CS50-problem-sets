@@ -26,7 +26,7 @@ int main(int argc, string argv[])
         int j = atoi(argv[1]);
         // Prompting for plaintext
         string pt = get_string("plaintext: ");
-        printf("ciphetext: ");
+        printf("ciphertext: ");
         // Dummy protection to not exceed ASCII table
         while (j >= 26)
         {
