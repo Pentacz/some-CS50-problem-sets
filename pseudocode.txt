@@ -1,0 +1,8 @@
+// Program stores the value written when running caesar (run with one command-line argument)
+// the value is stored as integer i - iterate to make sure all characters are digits
+// program gets string from user
+// each character's place in array is being substracted by 'i' value 
+// if it's an uppercase letter, rotate it
+// if it is a lowercase letter, shift it
+// if none, print as it is
+// print a newline
