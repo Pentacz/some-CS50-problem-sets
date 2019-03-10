@@ -22,7 +22,7 @@ int main(int argc, string argv[])
             else
             {
                 printf("Usage: ./vigenere keyword\n");
-                return 2;
+                return 1;
             }
         }
         // Prompting for plaintext
@@ -32,12 +32,6 @@ int main(int argc, string argv[])
         for (int k = 0; k < strlen(pt); k++)
         {
             int j = k;
-            if (isalpha(pt[k]))
-            {}
-            else
-            {
-                j = j - 1;
-            }
             while (j >= strlen(argv[1]))
             {
                 j = j - strlen(argv[1]);
