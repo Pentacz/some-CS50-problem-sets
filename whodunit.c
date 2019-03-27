@@ -77,7 +77,9 @@ int main(int argc, char *argv[])
             // find red or reddish
             if (triple.rgbtRed >= 0xfd)
             {
-                triple.rgbtRed = 0xff; triple.rgbtGreen = 0xff; triple.rgbtBlue = 0xff;
+                triple.rgbtRed = 0xff; 
+                triple.rgbtGreen = 0xff; 
+                triple.rgbtBlue = 0xff;
             }
 
             // write RGB triple to outfile
