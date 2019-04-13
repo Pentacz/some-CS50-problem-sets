@@ -105,7 +105,7 @@ bool check(const char *word)
 {
     // TODO check
     node *c = hashtable[hash(word)];
-    while(!c)
+    while (c != NULL)
     {
         // Compare strings
         if (strcasecmp(c->word, word) == 0)
@@ -114,9 +114,12 @@ bool check(const char *word)
             return true;
         }
         else
-        // Point next node
-        c = c->next;
+            // Point next node
+        {
+            c = c->next;
+        }
     }
+
     return false;
 }
 
@@ -128,7 +131,7 @@ bool unload(void)
     {
         node *c = hashtable[j];
         // Unload every node in a bucket/on that letter
-        while (!c)
+        while (c != NULL)
         {
             node *temp = c;
             c = c->next;
