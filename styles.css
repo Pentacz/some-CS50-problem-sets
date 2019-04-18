@@ -1,0 +1,80 @@
+body
+    {
+        background-color: rgb(140, 105, 27);
+    }
+
+h1 {
+        font-family: Arial;
+        color: white;
+        font-size: 35px;
+        text-align: center;
+    }
+
+h2  {
+        color: white;
+        font-size: 30px;
+        text-align: center;
+    }
+
+h3
+    {
+        color: white;
+        font-size: 25px;
+        text-align: center;
+    }
+
+p
+    {
+        font-family: Impact;
+        font-size: 20px;
+    }
+
+tr
+    {
+        height: 50px;
+        padding: 10px;
+        color: rgb(181, 161, 158);
+        border: solid black;
+    }
+
+td
+    {
+        background-color: rgb(106, 90, 205);
+        font-size: 22px;
+        font-family: Helvetica;
+        text-align: center;
+        padding: 15px;
+    }
+
+button
+{
+    background-color: rgb(140, 105, 27);
+
+}
+
+a
+{
+    color: rgb(0, 0, 255);
+}
+
+
+/* some bootstrap box sizing */
+.parent {
+  width: 50%;
+  border: 5px solid #E18728;
+  float: left;
+}
+
+.child {
+  width: 90%;
+  padding: 20%;
+  border: 4px solid black;
+  margin: .5em auto;
+}
+
+.twins {
+  width: 50%;
+  padding: 1em;
+  border: 4px solid black;
+  float: left;
+}
