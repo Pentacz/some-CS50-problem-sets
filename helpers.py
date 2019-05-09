@@ -29,8 +29,8 @@ def substrings(a, b, n):
     # TODO
     # take string inputs a, b and substring length n
     # split each string into substrings of length n
-    suba = set(a[i:n+i] for i in range(len(a) - 1))
-    subb = set(b[i:n+i] for i in range(len(b) - 1))
+    suba = set(a[i:n+i] for i in range(len(a) - n + 1))
+    subb = set(b[i:n+i] for i in range(len(b) - n + 1))
     # compute a list of all substrings that appear in both a and b
     # return the list
     return list(suba.intersection(subb))
