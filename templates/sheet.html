@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+<h1 class="mb-3">Survey sheet</h1>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+          <th scope="col">name</th>
+          <th scope="col">radio</th>
+          <th scope="col">select</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for line in sheet %}
+            <tr>
+            {% for element in line %}
+                <td> {{ element }} </td>
+            {% endfor %}
+            </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+
+{% endblock %}

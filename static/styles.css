@@ -1,0 +1,50 @@
+/* TODO */
+
+body
+    {
+        background-color: rgb(140, 105, 27);
+    }
+
+/* some bootstrap form sizing */
+form {
+  width: 25%;
+  background-color: GRAY;
+  border: 5px solid black;
+  float: left;
+  padding: 1em;
+}
+
+thead {
+    width: 25%;
+}
+
+tbody {
+    width: 25%;
+}
+
+table {
+    width: 25%;
+    background-color: blue;
+}
+
+th {
+    width: 25%;
+    background-color: blue;
+}
+
+tr
+    {
+        height: 30px;
+        width: 25%;
+        color: rgb(181, 161, 158);
+        border: solid black;
+    }
+
+td
+    {
+        background-color: rgb(106, 90, 205);
+        font-size: 15px;
+        width: 25%;
+        font-family: Helvetica;
+        text-align: left;
+    }
