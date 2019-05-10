@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <!-- http://getbootstrap.com/docs/4.1/content/typography/ -->
+    <h1 class="mb-3">Form</h1>
+
+    <!-- http://getbootstrap.com/docs/4.1/components/forms/ -->
+    <form action="/form" method="post">
+
+        <!-- TODO -->
+
+        <p></p>
+        <input type="text" class="form-control" placeholder="Name" name="name"><br>
+
+        <p></p>
+        <p>What type of books do you like?</p>
+
+        <input type="radio" name="radio" value="sci-fi" checked>sci-fi<br>
+        <input type="radio" name="radio" value="criminal">criminal<br>
+        <input type="radio" name="radio" value="fantasy">fantasy<br>
+        <input type="radio" name="radio" value="scientific">scientific<br>
+        <input type="radio" name="radio" value="other">other<br>
+
+        <p></p>
+        <p>How many books do you read?</p>
+        <select class="form-control" name="how many">
+        <option value="one per week or more">one per week or more</option>
+        <option value="1-4 per month">1-4 per month</option>
+        <option value="1-12 per year">1-12 per year</option>
+        <option value="less than 1 per year">less than 1 per year</option>
+        </select><br>
+        <p></p>
+
+        <!-- http://getbootstrap.com/docs/4.1/components/buttons/ -->
+        <button class="btn btn-primary" type="submit">Submit</button>
+
+    </form>
+
+    <script>
+
+        /* TODO */
+        document.querySelector('form').onsubmit = function() {
+            if (!document.querySelector('input').value) {
+                alert('You must provide your name!');
+                return false;
+            }
+            else if (!document.querySelector('select').value) {
+                alert('Please provide how often do you read!');
+                return false;
+            }
+            return true;
+        };
+    </script>
+
+{% endblock %}
