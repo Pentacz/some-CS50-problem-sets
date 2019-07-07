@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+        <div class="form-group">
+            <li>
+                Name: {{ name }}
+            </li>
+            <li>
+                Price: {{ price | usd }}
+            </li>
+            <li>
+                Symbol: {{ symbol }}
+            </li>
+        </div>
+
+        <a href="quote"><button class="btn btn-primary" type="submit">Check another stock</button></a>
+    </form>
+{% endblock %}

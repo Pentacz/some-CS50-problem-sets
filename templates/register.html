@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <form action="/register" method="post" id="myform">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text" id="username">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="password" placeholder="Password" type="password" id="password">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="confirmation" placeholder="Confirmation" type="password" id="confirmation">
+        </div>
+        <button class="btn btn-primary" type="submit">Register</button>
+    </form>
+
+    <script>
+    
+        /* JavaScript to prevent submit */
+        document.getElementById("myform").addEventListener("submit", function(event){
+            event.preventDefault();
+            var username=document.getElementById('username').value;
+            var password=document.getElementById('password').value;
+            var confirmation=document.getElementById('confirmation').value;
+            
+            /* Check if username, pass and pass confirm provided */
+            if (!username) {
+                alert('You must provide username mate!');
+                return false;
+            }
+            if (!password) {
+                alert('You must provide password dude!');
+                return false;
+            }
+            if (!confirmation) {
+                alert('You must provide password confirmation guy!');
+                return false;
+            }
+            
+            /* Ajax  JQuery's get to call /check in application.py to check if username not taken */
+            $.get("/check?username=" + encodeURIComponent(username), function(data) {
+                if (data == false) {
+                    alert("Username taken");
+                }
+            });
+            
+            /* As above, but to check if password meets requirements */
+            $.get("/passw?password=" + encodeURIComponent(password), function(x) {
+                if (x == false) {
+                    alert("sorry buddy, but password must have at least one special character, big letter, number and at least 8 characters. Sorry again, pal");
+                }
+                else {
+                    $('#myform').submit();
+                }
+            });
+        }); 
+    </script>
+{% endblock %}
