@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Main Page
+{% endblock %}
+
+{% block main %}
+    <h2>Portfolio</h2>
+
+    <!-- Get username, type table headers -->
+        <h4>Hello, {{ username }}!</h4>
+        <table>
+            <tr>
+                <th>Stock Name</th>
+                <th>Shares Owned</th>
+                <th>Current Price</th>
+                <th>Shares Value</th>
+                <!-- <th>Buy more</th> -->
+            </tr>
+
+    <!-- Set loop to write each stock, shares etc owned by user -->
+            {% for stock in portfolio %}
+            <tr>
+                <td>{{ stock.symbol }}</td>
+                <td>{{ stock.quantity }}</td>
+                <td>{{ stock.current_price | usd }}</td>
+                <td>{{ stock.total | usd }}</td>
+                <!-- TO maybe DO <td>
+                    <form action="/" method="post">
+                    <div class="form-group">
+                    <input type="number" autofocus class="form-control" name="buy" placeholder="How much?" min="1" max="1000000">
+                    </div>
+                    <button class="btn btn-primary" type="submit">Buy shares</button>
+                    </form>
+                </td> -->
+            {% endfor %}
+            </tr>
+        </table>
+
+    <!-- provide sum of cash and cash+values owned -->
+        <h4>Current cash balance: {{ cash }}<br>
+        Total portfolio value: {{ grand_total }}</h4>
+        
+    <!-- personal touch - some additional options -->
+        <h7>psst... wanna be cheater and add more cash to account?</h7>
+        <form action="/" method="post">
+            <div class="form-group">
+                <input type="number" autofocus class="form-control" name="addcash" placeholder="How much?" min="1" max="1000000">
+            </div>
+            <button class="btn btn-primary" type="submit">Add money</button>
+        </form>
+{% endblock %}
