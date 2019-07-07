@@ -76,10 +76,7 @@ def index():
         old_cash = db.execute("SELECT cash FROM users WHERE id = :id", id=session["user_id"])
         new_cash = old_cash[0]["cash"] + add_cash
         update = db.execute("UPDATE users SET cash = :newcash WHERE id = :id", newcash=new_cash, id=session["user_id"])
-        
         # User submitting Buy shares button
-        
-        
         return redirect("/")
         
 
@@ -184,7 +181,7 @@ def passw():
             
     # Again, but for special character
     check = 0
-    z = "`~!@#$%^&*()\'_+=-\"][}{';|:/.,?><\|-*/"
+    z = "`~!@#$%^&*()\'_+=-\"][}{';|:/.,?><|-*/"
     for k in passw:
         if k in z:
             y = 2
