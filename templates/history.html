@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <h3>History of your transactions</h3>
+
+        <table>
+            <tr>
+                <th>Purchased or Sold</th>
+                <th>Stock Name</th>
+                <th>Purchased/Sold</th>
+                <th>Purchase/Sale Price</th>
+                <th>Date and time of transaction</th>
+            </tr>
+
+    <!-- Loop to give history of transactions from portfolio SQL table -->
+            {% for x in portfolio %}
+            <tr>
+                <!-- First column checks if bought or sold -->
+                <td>{% if x.quantity > 0 %}
+                        {{ "Purchased" }}
+                    {% else %}
+                        {{ "Sold" }}
+                    {% endif %}</td>
+                <td>{{ x.symbol }}</td>
+                <td>{{ x.quantity }}</td>
+                <td>{{ x.price | usd }}</td>
+                <td>{{ x.date }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+{% endblock %}
