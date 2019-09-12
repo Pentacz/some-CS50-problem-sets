@@ -1,8 +1,6 @@
 # Finance
 
-Finance is a site where you can check, 'buy' and 'sell' NYSE stock. You can register and login - site will remember login and require it
-to make transactions. At start you get 10 000 virtual dollars which you can use. Stock info is brought by API so you can get
-actual price of stock. Starting page has info about your cash and owned shares, while history shows every transaction you made.
+Finance is a site where you can check, 'buy' and 'sell' New York Stock Exchange shares. You can register and login - site will remember login and require it to make transactions. At start you get 10 000 virtual dollars which you can use. Stock info is brought by API so you can get actual price of stock. Starting page has info about your cash and owned shares, while history shows every transaction you made.
 
 Most important parts of finance are in python. There is also SQL, html, css and javascript (mostly using jquery to prompt JSON e.g.
 username taken, password requirements)
