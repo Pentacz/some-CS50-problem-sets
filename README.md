@@ -1,4 +1,4 @@
-# Pentacz
+# Finance
 
 Finance is a site where you can check, 'buy' and 'sell' NYSE stock. You can register and login - site will remember login and require it
 to make transactions. At start you get 10 000 virtual dollars which you can use. Stock info is brought by API so you can get
